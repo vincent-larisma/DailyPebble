@@ -36,7 +36,13 @@ html {
   background-color: white; /* or any color that fits your design */
   z-index: 10;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
+}
+
+.custom_header_2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem;
 }

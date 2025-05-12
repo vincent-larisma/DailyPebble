@@ -12,6 +12,7 @@
   border: 1px solid black;
   height: 100px;
   width: 120px;
+  cursor: pointer;
   text-align: center;
   align-content: center;
   border-radius: 5px;
@@ -19,7 +20,6 @@
 
 .add_category {
   height: 80px;
-  cursor: pointer;
   font-size: large;
   font-weight: bolder;
 }

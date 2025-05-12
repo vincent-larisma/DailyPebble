@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Detail Page</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/detail.css" />
+  </head>
+  <body>
+    <header class="custom_header" id="categoryHeader">
+      <!-- Category name will be inserted here -->
+    </header>
+
+    <main>
+      <!-- Static -->
+      <div class="selection_container">
+        <div class="custom_header_2">Todo</div>
+        <section class="selection_list">
+          <div class="selection_item">
+            <input type="checkbox" id="clean_littersand" name="clean_littersand" value="Clean Littersand" />
+            <label for="clean_littersand">Clean Littersand</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="feed_cats" name="feed_cats" value="Feed the Cats" />
+            <label for="feed_cats">Feed the Cats</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="change_water" name="change_water" value="Change Water Bowl" />
+            <label for="change_water">Change Water Bowl</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="brush_cats" name="brush_cats" value="Brush the Cats" />
+            <label for="brush_cats">Brush the Cats</label>
+          </div>
+        </section>
+      </div>
+
+      <!-- IF There is special list -->
+      <div class="selection_container">
+        <div class="custom_header_2">Scheduled Todo</div>
+        <section class="selection_list">
+          <div class="selection_item">
+            <input type="checkbox" id="clean_littersand" name="clean_littersand" value="Clean Littersand" />
+            <label for="clean_littersand">Clean Littersand</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="feed_cats" name="feed_cats" value="Feed the Cats" />
+            <label for="feed_cats">Feed the Cats</label>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="scripts/detail.js"></script>
+  </body>
+</html>
