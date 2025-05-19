@@ -1,0 +1,41 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.form_container {
+  border: 1px solid black;
+  padding: 3rem;
+  border-radius: 5px;
+}
+
+.form_group {
+  margin-bottom: 1.5rem;
+}
+
+.color_squares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.color_square {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: border 0.2s;
+}
+
+.color_square.selected {
+  border: 2px solid black;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
