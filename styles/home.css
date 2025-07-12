@@ -22,4 +22,16 @@
   height: 80px;
   font-size: large;
   font-weight: bolder;
+  text-decoration: none;
+  color: inherit;
+}
+
+.add_category:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.add_category:visited {
+  text-decoration: none;
+  color: inherit;
 }

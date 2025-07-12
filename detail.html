@@ -9,7 +9,8 @@
   </head>
   <body>
     <header class="custom_header" id="categoryHeader">
-      <!-- Category name will be inserted here -->
+      <span id="categoryName"><!-- Category name will be inserted here --></span>
+      <button class="header_plus_btn" id="openModal">+</button>
     </header>
 
     <main>
@@ -51,6 +52,77 @@
         </section>
       </div>
     </main>
+
+    <!-- Modal -->
+    <div id="addItemModal" class="modal">
+      <div class="modal_content">
+        <div class="modal_header">
+          <h3>Add New Todo</h3>
+          <span class="close">&times;</span>
+        </div>
+        <form id="add_todo_form">
+          <!-- First row: Todo Name and Todo Type -->
+          <div class="modal_form_columns">
+            <div class="modal_left_column">
+              <div class="modal_form_group">
+                <label for="todo_name">Todo Name:</label>
+                <input type="text" id="todo_name" name="todo_name" required />
+              </div>
+            </div>
+            <div class="modal_right_column">
+              <div class="modal_form_group">
+                <label for="todo_type">Todo Type:</label>
+                <select id="todo_type" name="todo_type" required>
+                  <option value="">Select type...</option>
+                  <option value="todo">Todo</option>
+                  <option value="remind_item">Remind Item</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reminder fields (shown when remind_item is selected) -->
+          <div id="reminderFields">
+            <div class="modal_form_group">
+              <label for="remind_every">Remind Me Every:</label>
+              <div class="reminder_inputs">
+                <input type="number" id="remind_number" name="remind_number" min="1" placeholder="Number of" disabled />
+                <select id="remind_denomination" name="remind_denomination" disabled>
+                  <option value="day">Day</option>
+                  <option value="week">Week</option>
+                  <option value="month">Month</option>
+                  <option value="year">Year</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Date range fields -->
+            <div class="modal_form_columns">
+              <div class="modal_left_column">
+                <div class="modal_form_group">
+                  <label for="start_date">Starts at:</label>
+                  <input type="date" id="start_date" name="start_date" disabled />
+                </div>
+              </div>
+              <div class="modal_right_column">
+                <div class="modal_form_group">
+                  <label for="end_date">Ends at:</label>
+                  <input type="date" id="end_date" name="end_date" disabled />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes (full width) -->
+          <div class="modal_form_group">
+            <label for="todo_notes">Notes:</label>
+            <textarea id="todo_notes" name="todo_notes" placeholder="Add any notes or description for this todo..."></textarea>
+          </div>
+
+          <button type="submit">Add Todo</button>
+        </form>
+      </div>
+    </div>
 
     <script src="scripts/detail.js"></script>
   </body>
