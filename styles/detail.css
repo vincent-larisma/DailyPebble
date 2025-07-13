@@ -255,6 +255,44 @@
   flex: 2;
 }
 
+.perpetual_option {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.perpetual_label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.perpetual_label:hover {
+  color: #333;
+}
+
+.perpetual_label input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #333;
+}
+
+.perpetual_label input[type="checkbox"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.perpetual_label span {
+  font-weight: normal;
+  user-select: none;
+}
+
 .modal_content button {
   margin-top: 1rem;
   padding: 0.75rem 2rem;
