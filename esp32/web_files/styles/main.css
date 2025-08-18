@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/Merriweather_24pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/Merriweather_24pt-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/Merriweather_24pt-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+html {
+  font-family: 'Merriweather', serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* okay */
+  overflow-y: auto; /* okay */
+}
+
+.custom_header {
+  position: sticky;
+  background-color: white; /* or any color that fits your design */
+  z-index: 10;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.custom_header_2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem;
+}

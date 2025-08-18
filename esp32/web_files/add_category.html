@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Category</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/add_category.css" />
+  </head>
+  <body>
+    <header class="custom_header">Add New Category</header>
+
+    <main>
+      <div class="form_container">
+        <form id="add_category_form">
+          <div class="form_columns">
+            <div class="left_column">
+              <div class="form_group">
+                <label for="category_name">Category Name:</label>
+                <input type="text" id="category_name" name="category_name" required />
+              </div>
+
+              <div class="form_group">
+                <label for="category_color">Pick a Color:</label>
+                <div class="color_squares">
+                  <div class="color_square" data-color="#f8b195" style="background-color: #f8b195"></div>
+                  <div class="color_square" data-color="#f67280" style="background-color: #f67280"></div>
+                  <div class="color_square" data-color="#c06c84" style="background-color: #c06c84"></div>
+                  <div class="color_square" data-color="#6c5b7b" style="background-color: #6c5b7b"></div>
+                  <div class="color_square" data-color="#355c7d" style="background-color: #355c7d"></div>
+                  <div class="color_square" data-color="#99b898" style="background-color: #99b898"></div>
+                  <div class="color_square" data-color="#ffe0ac" style="background-color: #ffe0ac"></div>
+                  <div class="color_square" data-color="#dcedc1" style="background-color: #dcedc1"></div>
+                </div>
+                <input type="hidden" name="category_color" id="category_color" required />
+              </div>
+            </div>
+
+            <div class="right_column">
+              <div class="form_group">
+                <label for="category_notes">Notes:</label>
+                <textarea id="category_notes" name="category_notes" placeholder="Add any notes or description for this category..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Add Category</button>
+        </form>
+      </div>
+    </main>
+
+
+    <script src="scripts/add_category.js"></script>
+  </body>
+</html>

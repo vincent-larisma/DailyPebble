@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Detail Page</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/detail.css" />
+  </head>
+  <body>
+    <header class="custom_header" id="categoryHeader">
+      <span id="categoryName"><!-- Category name will be inserted here --></span>
+      <button class="header_plus_btn" id="openModal">+</button>
+    </header>
+
+    <main>
+      <!-- Static -->
+      <div class="selection_container">
+        <div class="custom_header_2">Todo</div>
+        <section class="selection_list">
+          <div class="selection_item">
+            <input type="checkbox" id="clean_littersand" name="clean_littersand" value="Clean Littersand" />
+            <label for="clean_littersand">Clean Littersand</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="feed_cats" name="feed_cats" value="Feed the Cats" />
+            <label for="feed_cats">Feed the Cats</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="change_water" name="change_water" value="Change Water Bowl" />
+            <label for="change_water">Change Water Bowl</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="brush_cats" name="brush_cats" value="Brush the Cats" />
+            <label for="brush_cats">Brush the Cats</label>
+          </div>
+        </section>
+      </div>
+
+      <!-- IF There is special list -->
+      <div class="selection_container">
+        <div class="custom_header_2">Scheduled Todo</div>
+        <section class="selection_list">
+          <div class="selection_item">
+            <input type="checkbox" id="clean_littersand" name="clean_littersand" value="Clean Littersand" />
+            <label for="clean_littersand">Clean Littersand</label>
+          </div>
+          <div class="selection_item">
+            <input type="checkbox" id="feed_cats" name="feed_cats" value="Feed the Cats" />
+            <label for="feed_cats">Feed the Cats</label>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="addItemModal" class="modal">
+      <div class="modal_content">
+        <div class="modal_header">
+          <h3>Add New Todo</h3>
+          <span class="close">&times;</span>
+        </div>
+        <form id="add_todo_form">
+          <!-- First row: Todo Name and Todo Type -->
+          <div class="modal_form_columns">
+            <div class="modal_left_column">
+              <div class="modal_form_group">
+                <label for="todo_name">Todo Name:</label>
+                <input type="text" id="todo_name" name="todo_name" required />
+              </div>
+            </div>
+            <div class="modal_right_column">
+              <div class="modal_form_group">
+                <label for="todo_type">Todo Type:</label>
+                <select id="todo_type" name="todo_type" required>
+                  <option value="">Select type...</option>
+                  <option value="todo">Todo</option>
+                  <option value="remind_item">Remind Item</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reminder fields (shown when remind_item is selected) -->
+          <div id="reminderFields">
+            <div class="modal_form_group">
+              <label for="remind_every">Remind Me Every:</label>
+              <div class="reminder_inputs">
+                <input type="number" id="remind_number" name="remind_number" min="1" placeholder="Number of" disabled />
+                <select id="remind_denomination" name="remind_denomination" disabled>
+                  <option value="day">Day</option>
+                  <option value="week">Week</option>
+                  <option value="month">Month</option>
+                  <option value="year">Year</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Date range fields -->
+            <div class="modal_form_columns">
+              <div class="modal_left_column">
+                <div class="modal_form_group">
+                  <label for="start_date">Starts at:</label>
+                  <input type="date" id="start_date" name="start_date" disabled />
+                </div>
+              </div>
+              <div class="modal_right_column">
+                <div class="modal_form_group">
+                  <label for="end_date">Ends at:</label>
+                  <input type="date" id="end_date" name="end_date" disabled />
+                  <div class="perpetual_option">
+                    <label class="perpetual_label">
+                      <input type="checkbox" id="perpetual" name="perpetual" disabled />
+                      <span>Perpetual</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes (full width) -->
+          <div class="modal_form_group">
+            <label for="todo_notes">Notes:</label>
+            <textarea id="todo_notes" name="todo_notes" placeholder="Add any notes or description for this todo..."></textarea>
+          </div>
+
+          <button type="submit">Add Todo</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts/detail.js"></script>
+  </body>
+</html>
